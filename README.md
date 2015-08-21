@@ -1,4 +1,4 @@
-## Message Box (信息提示框)
+## Message Box (浏览器信息提示框)
 
 
 MsgBox函数参数
