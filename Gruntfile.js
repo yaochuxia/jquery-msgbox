@@ -7,12 +7,34 @@ module.exports = function(grunt){
 	 	uglify: {
 	 		build: {
                  beautify: false,
-                 mangle:true
+                 mangle:true,
                  compress: true
 	 		},
 	 		files: [{
 	 			'build/msgbox.min.js': ['src/msgbox.js']
 	 		}]
+	 	},
+
+	 	jshint: {
+            options:
+               eqeqeq:true,
+               trailing:true
+            files: ['src/msgbox.js'],
+	 	},
+
+	 	wacth: {
+	 		another: {
+	 			files: ['src/*.js']
+                tasks: [jshint,uglify] 
+                options: {
+                	livereload: 1377
+                }  
+	 		}
 	 	}
 	 })
-}
+
+	 grunt.loadNpmTasks('grunt-contrib-uglify');
+	 grunt.loadNpmTasks('grunt-contrib-jshint');
+	 grunt.loadNpmTasks('grunt-contrib-wacth');
+	 grunt.registerTask('default',['uglify']);
+};
