@@ -4,5 +4,15 @@ module.exports = function(grunt){
 	// 给grunt添加配置,所有插件的配置信息
 	 grunt.initConfig({
 	 	pkg: grunt.file.redJSON('package.json'),
+	 	uglify: {
+	 		build: {
+                 beautify: false,
+                 mangle:true
+                 compress: true
+	 		},
+	 		files: [{
+	 			'build/msgbox.min.js': ['src/msgbox.js']
+	 		}]
+	 	}
 	 })
 }
