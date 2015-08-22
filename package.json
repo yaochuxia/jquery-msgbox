@@ -1,6 +1,6 @@
 {
-  "name": "msgbox",
-  "version": "1.0.0",
+  "name": "msgbox",// 表示该项的名字
+  "version": "1.0.0",//该项目的版本号
   "description": "",
   "main": "index.js",
   "directories": {
@@ -19,9 +19,9 @@
     "url": "https://github.com/yaochuxia/msgbox/issues"
   },
   "homepage": "https://github.com/yaochuxia/msgbox#readme",
-  "devDependencies": {
+  "devDependencies": {//该项目的依赖，目前我们的依赖只有grunt
     "grunt": "^0.4.5",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-uglify": "^0.9.1"
+    "grunt-contrib-concat": "^0.5.1",//合并工具
+    "grunt-contrib-uglify": "^0.9.1"//压缩工具
   }
 }
