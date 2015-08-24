@@ -94,8 +94,8 @@
         });
 
         var _widht = document.body.clientWidth;  //网页可见区域宽
-        var _height = document.body.clientHeight; //网页可见区域高
-         console.log(_height)
+        var _height = window.innerHeight; //网页可见区域高
+        console.log(_height)
         var boxWidth = $("#mb_con").width();
         var boxHeight = $("#mb_con").height();
 
