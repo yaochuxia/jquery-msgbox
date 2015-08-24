@@ -1,7 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<title>msgbox 更改浏览器默认弹框</title>
+	<script type="text/javascript" src="../jquery.js"></script>
+	<script type="text/javascript" src="../build/msgbox.min.js"></script>
+</head>
+<body>
+	<input id="add" type="button" value="添加" />
+    <input id="delete" type="button" value="删除" />
+    <input id="update" type="button" value="修改" />
 
+
+<script type="text/javascript">
+	$("#add").bind("click", function(){
+		$.MsgBox.Alert("消息","哈哈, 添加成功");
+	})
+
+	// 回调函数可以直接写方法function(){}
+	$("#delete").bind("click", function () {
+        $.MsgBox.Confirm("温馨提示", "执行删除后将无法恢复，确定继续吗？温馨提示", function () { alert("你居然真的删除了..."); });
+    });
+
+    //也可以传方法名 test
+    function test() {
+        alert("你点击了确定,进行了修改");
+    }
+
+    //当然你也可以不给回调函数,点击确定后什么也不做，只是关闭弹出层
+    $("#update").bind("click", function(){
+    	 $.MsgBox.Confirm("温馨提示", "确定要进行",function(){})
+    })
 </script>
 </body>
 </html>
